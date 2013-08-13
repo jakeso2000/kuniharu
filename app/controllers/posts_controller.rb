@@ -1,11 +1,11 @@
-#coding : utf-8
+	#coding : utf-8
 
 class PostsController < ApplicationController
  def index
   @posts = Post.all( :order => "created_at DESC")
  end
  def show
- 	@post = Post.find(params[:id])
+ 	@post = Post.find(	)
  	@comment = Post.find(params[:id]).comments.build
  end
  def new
@@ -36,5 +36,7 @@ class PostsController < ApplicationController
     @post.destroy
     render json: {post: @post}
  end 
-
+ def tab
+ 	@posts = Post.all( :order => "updated_at DESC")
+ end
 end
