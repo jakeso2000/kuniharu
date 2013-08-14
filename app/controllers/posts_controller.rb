@@ -39,4 +39,6 @@ class PostsController < ApplicationController
  def tab
  	@posts = Post.all( :order => "updated_at DESC")
  end
+ 
+ 
 end
