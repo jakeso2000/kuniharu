@@ -5,7 +5,11 @@ class PostsController < ApplicationController
   @posts = Post.all( :order => "created_at DESC")
  end
  def show
+<<<<<<< HEAD
  	@post = Post.find(params[:id])
+=======
+ 	@post = Post.find(	)
+>>>>>>> 51d5e30adba2f99844b403b9b70f99570f652e95
  	@comment = Post.find(params[:id]).comments.build
  end
  def new
