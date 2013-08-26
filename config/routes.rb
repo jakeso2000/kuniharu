@@ -1,7 +1,6 @@
 Blog::Application.routes.draw do
   get "posts/tab"
-<<<<<<< HEAD
-
+  
   resources :posts do 
     resources :comments
  
@@ -9,12 +8,11 @@ Blog::Application.routes.draw do
     #OmniAuth 
   match "/auth/facebook/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
-=======
   resources :posts do 
     resources :comments
     
   end
->>>>>>> 51d5e30adba2f99844b403b9b70f99570f652e95
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
